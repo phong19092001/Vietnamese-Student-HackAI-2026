@@ -1,0 +1,33 @@
+Agent 1: Solver
+
+- Đọc câu hỏi
+- Phân tích câu hỏi và các đáp án
+- Chọn đáp án phù hợp nhất
+- Giải thích ngắn gọn lý do lựa chọn
+- Trả về:
+  + ANSWER
+  + REASON
+
+
+Agent 2: Critic
+
+- Kiểm tra lại kết quả của Solver
+- Tìm lỗi thực sự trong lập luận của Solver
+- Chỉ đề xuất đổi đáp án khi có bằng chứng cụ thể
+- Nếu không đủ bằng chứng thì giữ nguyên đáp án Solver
+- Trả về:
+  + ANSWER
+  + REASON
+
+
+Agent 3: Judge (Chỉ kích hoạt khi Solver và Critic bất đồng)
+
+- Đọc câu hỏi và các đáp án
+- Đọc lập luận của Solver và Critic
+- Đánh giá bằng chứng của Critic
+- Mặc định ưu tiên giữ đáp án của Solver
+- Chỉ đổi đáp án nếu bằng chứng của Critic đủ mạnh
+- Trả về:
+  + FINAL
+  + DECISION
+  + REASON
