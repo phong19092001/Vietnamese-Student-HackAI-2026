@@ -23,7 +23,8 @@ The project runs completely **offline** using a locally deployed **Qwen2.5-0.5B-
 ├── requirements.txt
 ├── README.md
 └── models/
-    └── Qwen2.5-0.5B-Instruct/
+    └── models/
+(optional, packaged inside Docker image)
 ```
 
 ---
@@ -147,6 +148,6 @@ Final  Judge
 
 ## Notes
 
-* The solution uses a local language model packaged with the Docker image.
+* The submitted Docker image already contains the required model for offline inference.
 * Judge is only executed when Solver and Critic disagree, reducing unnecessary inference while maintaining answer quality.
 * The program outputs both prediction results and per-question inference time as required by the competition.
